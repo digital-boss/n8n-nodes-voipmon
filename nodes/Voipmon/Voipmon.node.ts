@@ -90,22 +90,24 @@ export class Voipmon implements INodeType {
 				};
 				try {
 					const response = await this.helpers.request(options);
-					if (!response) {
+
+					if (response?.success === true) {
 						return {
-							status: "Error",
-							message: `Invalid Url`,
+							status: "OK",
+							message: "Connection successful!",
 						};
 					}
 
-					if (response.success === false) {
+					if (response?.success === false) {
 						return {
 							status: "Error",
-							message: `${response.errors?.reason}`,
+							message: response.errors?.reason,
 						};
 					}
+
 					return {
-						status: "OK",
-						message: "Connection successful!",
+						status: "Error",
+						message: `Invalid Url`,
 					};
 				} catch (err: any) {
 					return {
