@@ -22,7 +22,7 @@ export class Voipmon implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: "Voipmon",
 		name: "Voipmon",
-		icon: "file:voipmon.png",
+		icon: "file:voipmon.svg",
 		group: ["transform"],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
