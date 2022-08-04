@@ -1,7 +1,7 @@
 {
   "name": "@digital-boss/n8n-nodes-voipmon",
   "version": "0.1.1",
-  "description": "Cloud DNS support for n8n.",
+  "description": "Voipmon support for n8n.",
   "license": "MIT",
   "homepage": "https://n8n.io",
   "author": {
